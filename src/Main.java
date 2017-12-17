@@ -1,11 +1,14 @@
+import DataAccesLayer.MovieRepository;
+import DataAccesLayer.SqlConnection;
+
+import java.sql.*;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Roep anders even een boodschap naar binnen.");
+        SqlConnection connection = new SqlConnection();
+        connection.connectDatabase("jdbc:sqlserver://localhost\\SQLEXPRESS;databaseName=NetflixStatistics;integratedSecurity=true;");
 
-        GetBoodschap();
-    }
+        MovieRepository repo = new MovieRepository(connection);
 
-    public static void GetBoodschap(){
-        System.out.println("Boodschap!");
+        System.out.println(repo.getMovies());
     }
 }
