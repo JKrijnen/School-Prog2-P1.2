@@ -12,7 +12,7 @@ public class AfleveringRepository{
         this.connection = sqlConnection;
     }
     public ArrayList<Aflevering> getAfleveringen(){
-        ResultSet set = connection.executeSql("SELECT * FROM Profile");
+        ResultSet set = connection.executeSql("SELECT * FROM Aflevering");
 
         ArrayList<Aflevering> afleveringen = new ArrayList<>();
         try {

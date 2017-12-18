@@ -12,7 +12,7 @@ public class AccountRepository {
         this.connection = sqlConnection;
     }
         public ArrayList<Account> getAccounts(){
-            ResultSet set = connection.executeSql("SELECT * FROM Profile");
+            ResultSet set = connection.executeSql("SELECT * FROM Account");
 
             ArrayList<Account> accounts = new ArrayList<>();
             try {
