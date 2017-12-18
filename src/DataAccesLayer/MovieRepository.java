@@ -33,12 +33,4 @@ public class MovieRepository {
           }
         return movies;
     }
-
-    public String getView4Movie(){
-        ResultSet set = connection.executeSql("SELECT MAX(Tijdsduur) FROM Film");
-
-        System.out.println(set);
-
-        return "Iets";
-    }
 }
