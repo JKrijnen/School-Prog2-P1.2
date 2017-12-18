@@ -12,7 +12,7 @@ public class ProfileRepository {
         this.connection = sqlConnection;
     }
     public ArrayList<Profile> getProfile(){
-        ResultSet set = connection.executeSql("SELECT * FROM Profile");
+    ResultSet set = connection.executeSql("SELECT * FROM Profiel");
 
         ArrayList<Profile> profiles = new ArrayList<>();
         try {

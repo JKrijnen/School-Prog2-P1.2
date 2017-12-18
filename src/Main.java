@@ -8,7 +8,6 @@ public class Main {
         connection.connectDatabase("jdbc:sqlserver://localhost\\SQLEXPRESS;databaseName=NetflixStatistics;integratedSecurity=true;");
 
         MovieRepository repo = new MovieRepository(connection);
-
-        System.out.println(repo.getMovies());
+System.out.println(repo.getMovies());
     }
 }

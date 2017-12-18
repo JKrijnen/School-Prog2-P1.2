@@ -13,7 +13,7 @@ import java.util.ArrayList;
             this.connection = sqlConnection;
         }
         public ArrayList<Bekeken> getBekeken(){
-            ResultSet set = connection.executeSql("SELECT * FROM Profile");
+            ResultSet set = connection.executeSql("SELECT * FROM Bekeken");
 
             ArrayList<Bekeken> bekekens = new ArrayList<>();
             try {

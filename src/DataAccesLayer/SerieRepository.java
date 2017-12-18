@@ -13,7 +13,7 @@ public class SerieRepository {
         this.connection = sqlConnection;
     }
     public ArrayList<Serie> getSeries(){
-        ResultSet set = connection.executeSql("SELECT * FROM Profile");
+        ResultSet set = connection.executeSql("SELECT * FROM Serie");
 
         ArrayList<Serie> series = new ArrayList<>();
         try {
