@@ -23,7 +23,7 @@ public class MovieRepository {
               movies.add(new Movie(
                       set.getInt("Id"),
                       set.getString("Titel"),
-                      set.getString("Leeftijdindicatie"),
+                      set.getString("Leeftijdsindicatie"),
                         set.getString("Taal"),
                       set.getString("Tijdsduur"),
                       set.getString("Genre")));
@@ -33,5 +33,4 @@ public class MovieRepository {
           }
         return movies;
     }
-
 }
