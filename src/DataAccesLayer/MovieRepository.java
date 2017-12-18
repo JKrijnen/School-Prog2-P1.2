@@ -15,7 +15,7 @@ public class MovieRepository {
     }
 
     public ArrayList<Movie> getMovies() {
-        ResultSet set = connection.executeSql("SELECT * FROM Film");
+        ResultSet set = connection.executeSql("SELECT * FROM Profile");
 
       ArrayList <Movie> movies = new ArrayList<>();
       try {
