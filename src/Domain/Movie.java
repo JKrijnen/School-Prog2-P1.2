@@ -1,10 +1,5 @@
 package Domain;
 
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Movie {
     private int id;
     private String title;
@@ -13,7 +8,7 @@ public class Movie {
     private String length;
     private String category;
 
-    public Movie (int id, String title, String ageIndication, String language, String length, String category){
+    public Movie(int id, String title, String ageIndication, String language, String length, String category){
         this.id = id;
         this.title = title;
         this.ageIndication = ageIndication;
@@ -73,7 +68,7 @@ public class Movie {
     @Override
     public String toString() {
         return String
-                .format("Movie [id=%s, Titel=%s, Leeftijdsindicatie=%s, Taal=%s, Tijdsduur=%s, Genre=&s], \n",
+                .format("Movie [id=%s, Titel=%s, Leeftijdsindicatie=%s, Taal=%s, Tijdsduur=%s, Genre=%s], \n",
                         id, title, ageIndication, language, length, category);
     }
 }

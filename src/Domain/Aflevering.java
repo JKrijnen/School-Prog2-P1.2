@@ -54,6 +54,13 @@ public class Aflevering {
     public void setLength(String length) {
         this.length = length;
     }
+
+    @Override
+    public String toString() {
+        return String
+                .format("\n%s;%s",
+                        season, title);
+    }
 }
 
 

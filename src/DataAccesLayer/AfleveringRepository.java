@@ -29,4 +29,26 @@ public class AfleveringRepository{
         }
         return afleveringen;
     }
+
+    public ArrayList<Aflevering> getAfleveringenX(String serie){
+        ResultSet set = connection.executeSql(
+                "SELECT *\n" +
+                "FROM Aflevering \n" +
+                "WHERE Serie = '" + serie + "'");
+
+        ArrayList<Aflevering> afleveringen = new ArrayList<>();
+        try {
+            while (set.next()) {
+                afleveringen.add(new Aflevering(
+                        set.getInt("Id"),
+                        set.getString("Serie"),
+                        set.getString("Seizoen"),
+                        set.getString("Titel"),
+                        set.getString("Titel")));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return afleveringen;
+    }
 }

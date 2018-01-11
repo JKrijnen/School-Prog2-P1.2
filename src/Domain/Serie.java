@@ -64,4 +64,11 @@ public class Serie {
     public void setLooksLike(String looksLike) {
         this.looksLike = looksLike;
     }
+
+    @Override
+    public String toString() {
+        return String
+                .format("%s;%s",
+                        serie, genre);
+    }
 }
